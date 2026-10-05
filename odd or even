@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Enter any nyumber:" x
+read x
+if [(x/2)==0 ]; then 
+echo "even"
+fi
