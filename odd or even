@@ -2,6 +2,6 @@
 
 echo "Enter any nyumber:"
 read x
-if (((x/2) -eq 0)); then 
+if ((x/2) == 0); then 
 echo "even"
 fi
