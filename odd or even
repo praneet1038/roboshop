@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter any nyumber:" x
+echo "Enter any nyumber:"
 read x
 if [(x/2)==0 ]; then 
 echo "even"
