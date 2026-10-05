@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "enter your number: "
-read number
+read -s number
 
 if [ $number -gt 100 ]; then
 echo "your number is greater than 100"
