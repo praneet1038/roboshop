@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "Enter any nyumber:"
+echo "Enter any number:"
 read x
+
 if (( x % 2 == 0 )); then
-echo "even"
+    echo "even"
 else
-echo "odd"
+    echo "odd"
 fi
