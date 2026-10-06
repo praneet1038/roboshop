@@ -3,7 +3,7 @@
 echo "Enter any number:"
 read x
 
-if (( x % 2 == 0 )); then
+if (( x % 2 == 0 )); then # here we are not using square brackets
     echo "even"
 else
     echo "odd"
