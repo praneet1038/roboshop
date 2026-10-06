@@ -1,10 +1,9 @@
 #!/bin/bash
-# checking for a file name exists or not 
-find / -name uk
-if [$? -eq 0 ]; then 
-echo "file exists"
-exit 0
+
+if [ -f "uk" ]; then
+    echo "File exists"
+    exit 0
 else
-echo "not"
-exit 1
+    echo "File does not exist"
+    exit 1
 fi
