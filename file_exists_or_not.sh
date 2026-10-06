@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f "uk" ]; then
+if [ -f "india" ]; then
     echo "File exists"
     exit 0
 else
