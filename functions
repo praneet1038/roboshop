@@ -3,5 +3,5 @@ greet(){
 
     echo "Hello world"
 }
-
+# You have written a function. Now you can call the function as below:
 greet
