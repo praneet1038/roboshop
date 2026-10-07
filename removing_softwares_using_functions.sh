@@ -20,6 +20,9 @@ fi
 main(){
 
     removing_package httpd
+    removing_package git
+    removing_package nginx
+    removing_package vim
 }
 
 main
