@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 # Function to check if the script is running as root
@@ -8,7 +7,6 @@ check_root() {
         exit 1
     fi
 }
-
 
 # Function to install Nginx
 install_nginx() {
@@ -23,7 +21,6 @@ install_nginx() {
     fi
 }
 
-
 # Function to install Git
 install_git() {
     echo "Installing Git..."
@@ -37,7 +34,6 @@ install_git() {
     fi
 }
 
-
 # Function to install Vim
 install_vim() {
     echo "Installing Vim..."
@@ -50,6 +46,8 @@ install_vim() {
         echo "Vim installation failed"
     fi
 }
+
+# Call the functions
 check_root
 install_nginx
 install_git
