@@ -13,7 +13,7 @@ exit 1
 fi
 mkdir -p /var/log/scripts
 
-file_name="/var/log/scripts/$?.log"
+file_name="/var/log/scripts/$0.log"
 
 # installing software using function
 installing_software(){
