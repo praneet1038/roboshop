@@ -13,9 +13,9 @@ package=$1
 echo "installing $package"
 dnf install "$package" -y
 if [ "$?" -eq 0 ];then
-echo "$1 installation successful"
+echo "$package installation successful"
 else
-echo "$1 installation FAILED"
+echo "$package installation FAILED"
 fi
 }
 
