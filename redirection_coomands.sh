@@ -20,7 +20,7 @@ installing_software(){
 package=$1
 dnf install "$package" -y &>> "$file_name"
 if [ "$?" -eq 0 ]; then
-echo "SUCCESSFULLY installed "$package""| tee /var/log/scripts/"$0".log
+echo "SUCCESSFULLY installed "$package""| tee -a $file_name
 else
 echo ""$package" installation FAILED!!"
 fi
