@@ -48,7 +48,22 @@ install_vim() {
 }
 
 # Call the functions
+echo "Starting script..."
+
 check_root
+
+echo "Root check completed"
+
 install_nginx
+
+echo "Nginx function completed"
+
 install_git
+
+echo "Git function completed"
+
 install_vim
+
+echo "Vim function completed"
+
+echo "Script completed"
