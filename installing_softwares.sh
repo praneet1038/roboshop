@@ -50,13 +50,7 @@ install_vim() {
         echo "Vim installation failed"
     fi
 }
-
-
-# Main part of the script
-
-check_root
-
-install_nginx
-install_git
-install_vim
-
+check_root()
+install_nginx()
+install_git()
+install_vim()
