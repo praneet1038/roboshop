@@ -16,13 +16,10 @@ if [ "$?" -eq 0 ];then
 echo "$1 installation successful"
 else
 echo "$1 installation FAILED"
-
 }
 
 main(){
-
 installing_software nginx
-
 }
 
 main
