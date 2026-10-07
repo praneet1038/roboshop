@@ -60,5 +60,3 @@ install_nginx
 install_git
 install_vim
 
-echo "All installation tasks completed"
-```
