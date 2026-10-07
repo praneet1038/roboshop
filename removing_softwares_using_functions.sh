@@ -18,11 +18,13 @@ fi
 }
 
 main(){
-
-    removing_package httpd
+ removing_package httpd
+    echo "Hi Praneeth! "$1" packaage removeed successfully"
     removing_package git
+    echo "Hi Praneeth! "$1" packaage removeed successfully"
     removing_package nginx
+    echo "Hi Praneeth! "$1" packaage removeed successfully"
     removing_package vim
+    echo "Hi Praneeth! "$1" packaage removeed successfully"
 }
-
 main
