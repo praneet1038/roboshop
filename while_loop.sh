@@ -2,8 +2,9 @@
 
 count=1
 
-do 
+ 
 while [[ count -eq 5 ]]
+do
 echo " $count "
 count = $((count+1))
 done
