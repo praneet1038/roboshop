@@ -19,4 +19,12 @@ echo ""$package" installation FAILED!!"
 fi
 }
 
+
+main(){
 installing_software tree
+installing_software wget
+installing_software unzip
+installing_software tar
+}
+
+main
