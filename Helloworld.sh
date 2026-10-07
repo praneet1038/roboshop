@@ -1,3 +1,3 @@
 !#/bin/bash
 echo "hello world"
-echo " I am learning git "
+echo " I am learning git cd ro  "
