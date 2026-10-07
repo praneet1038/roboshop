@@ -23,7 +23,7 @@ main(){
 installing_software nginx
 installing_software vim
 installing_software git 
-installing_software apache
+installing_software httpd
 }
 
 main
