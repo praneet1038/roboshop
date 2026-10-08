@@ -15,8 +15,12 @@ fi
 
 for i in "$@"
 do
+ dnf list installed $i
+ if [[ "$?" -eq 0 ]]; then 
 echo "installing"|tee -a $filename
 dnf install "$i" -y|tee -a $filename
-
+else
+echo " $i already installed...therefore skipping      "
+fi
 done
 
