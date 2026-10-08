@@ -1,10 +1,22 @@
 #!/bin/bash
 
+mkdir -p /var/log/scripts
+filename="/var/log/scripts/"$?".log"
+
+x=$(id -u)
+
+if [[ $x -eq 0 ]]; then
+echo "Installation in progress..Running as root user"| tee $filename
+else 
+echo "Please Run this script as root user"|tee $filename
+exit 1
+fi 
+
 for i in "$@"
 
 do
-echo "installing"
-dnf install "$i" -y
+echo "installing"|tee $filename
+dnf install "$i" -y|tee $filename
 
 done
 
