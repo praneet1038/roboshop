@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p /var/log/scripts
-filename="/var/log/scripts/"$0".log"
+filename="/var/log/scripts/$0.log"
 
 
 x=$(id -u)
