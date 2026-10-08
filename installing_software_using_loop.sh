@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 mkdir -p /var/log/scripts
 filename="/var/log/scripts/$0.log"
 
