@@ -15,7 +15,7 @@ fi
 
 for i in "$@"
 do
- dnf list installed $i
+ dnf list installed "$i"
  if [[ "$?" -ne 0 ]]; then 
 echo "installing"|tee -a $filename
 dnf install "$i" -y|tee -a $filename
