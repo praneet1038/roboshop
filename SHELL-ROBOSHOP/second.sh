@@ -8,4 +8,4 @@ source ./first.sh
 echo "my name is $name"
 echo "my age is $age"
 echo "**********************************"
-echo "my pid is: $$"
+echo "This is from second and my pid is: $$"
