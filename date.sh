@@ -1,8 +1,10 @@
 #!/bin/bash
-a=$(date)
+a=$(date +%s)
 echo "$a"
-b=$date
+b=$date #here it wil think it as expanding a varibale by the name date. Therefore it will print an empty string.
 sleep 5
-c=$(date)
+c=$(date +%s)
 echo "$b"
 echo "$c"
+ENDTIME=$(($c-$b))
+echo "script executed in $ENDTIME seconds"
