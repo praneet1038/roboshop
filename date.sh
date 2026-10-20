@@ -6,5 +6,5 @@ sleep 5
 c=$(date +%s)
 echo "$b"
 echo "$c"
-ENDTIME=$(($c-$b))
+ENDTIME=$(($c-$a))
 echo "script executed in $ENDTIME seconds"
