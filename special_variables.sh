@@ -10,6 +10,10 @@ echo "The total number of variables supplied to this script are "$#" "
 
 echo "The present directory is "$PWD""
 
+echo "The Previous directory is: $OLDPWD"
+
+echo "The Process ID of current shell is : "$$""
+
 echo  "The home directory of the present user is "$HOME" "
 
 echo  "The user that is running the script is "$USER" "
