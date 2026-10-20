@@ -10,5 +10,5 @@ echo "The total number of variables supplied to this script are "$#" "
 
 echo "The present directory is "$PWD""
 
-ECHO "The home directory of the present user is "$HOME" "
+echo  "The home directory of the present user is "$HOME" "
 
