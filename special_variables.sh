@@ -12,3 +12,5 @@ echo "The present directory is "$PWD""
 
 echo  "The home directory of the present user is "$HOME" "
 
+echo  "The user that is running the script is "$USER" "
+
