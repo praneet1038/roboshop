@@ -1,5 +1,6 @@
 #!/bin/bash
 a="$#"
+echo "The number of arguments provided to the script is : "$#""
 i=0
 while [ "$i" -ge "$a" ]
 do 
