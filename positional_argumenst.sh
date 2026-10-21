@@ -6,6 +6,12 @@ echo "fruits are ${#fruits[@]}" #This give the count of all the items in an arra
 echo "The first fruit is ${fruits[0]}" #This gives the value that is stored in item holding index zero
 echo "The second fruit is ${fruits[1]}"
 echo "The third fruit is ${fruits[2]}"
+echo "**************************************************"
+for fruit in "${fruits[@]}"
+do
+    echo "$fruit"
+done
+echo "******************************************************"
 fruits[1]=choclate #This update the value of item whose index is 1 to a new value that is choclate in our case
 echo "The second fruit is ${fruits[1]}"
 echo "****************************************************"
