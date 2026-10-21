@@ -1,7 +1,7 @@
 #!/bin/bash
 a="$1"
 b="$2"
-sum=$(($a+$b))
+sum=$(( a+b ))
 echo "$sum"
 echo "The name of the script is "$0""
 echo "The number of arguments supplied to the script is "$#""
