@@ -6,7 +6,7 @@ do
 
 echo "first argument is: "$i""
 
-i=i+1
+i=$((i+1))
 
 
 done 
