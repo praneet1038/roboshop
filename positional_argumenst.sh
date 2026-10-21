@@ -8,3 +8,9 @@ echo "The second fruit is ${fruits[1]}"
 echo "The third fruit is ${fruits[2]}"
 fruits[1]=choclate #This update the value of item whose index is 1 to a new value that is choclate in our case
 echo "The second fruit is ${fruits[1]}"
+echo "****************************************************"
+
+for fruit in "${fruits[@]}"
+do
+    echo "$fruit"
+done
