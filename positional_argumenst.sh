@@ -20,3 +20,17 @@ for fruit in "${fruits[@]}"
 do
     echo "$fruit"
 done
+
+echo "********************************************************"
+
+numbers=(10 20 30 40 50)
+
+echo "First element: ${numbers[0]}"
+echo "Third element: ${numbers[2]}"
+echo "Array length: ${#numbers[@]}"
+
+echo "All elements:"
+for num in "${numbers[@]}"
+do
+    echo "$num"
+done
