@@ -1,13 +1,11 @@
 #!/bin/bash
-a="$#"
-echo "The number of arguments provided to the script is : "$#""
-i=0
-while [ "$i" -ge "$a" ]
-do 
 
-echo "first argument is: "$i""
+a=$#
+echo "The number of arguments provided to the script is: $a"
 
-i=$((i+1))
-
-
-done 
+i=1
+while [ "$i" -le "$a" ]
+do
+    echo "Argument $i is: ${!i}"
+    i=$((i + 1))
+done
