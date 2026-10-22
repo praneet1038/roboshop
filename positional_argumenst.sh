@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#An array in shell scripting is a variable that stores multiple values under a single name. Each value is accessed using an index.
+
 fruits=("apple", "banana", "cherry") # This creates the array
 echo "All the items/elements that are in this array is: ${fruits[@]}" #This gives all the items that re in array
 echo "The index value of the elements/items are: ${!fruits[@]}" # This gets all indexes values
