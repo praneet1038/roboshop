@@ -5,8 +5,7 @@
 x=$(id -u)
 
 if [ $x -gt 0 ]; then 
-    echo "RUN THIS SCRIPT AS ROOT USER"
-    exit 1 
+    echo "RUN THIS SCRIPT AS ROOT USER" 
 else 
-    dnf install nginx -y
+    sudo dnf install nginx -y
 fi
