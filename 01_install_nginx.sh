@@ -17,4 +17,5 @@ if [ "$?" -eq 0 ]; then
 echo "NGINX installation is successful"
 else
 echo "NGINX FAILURE.....!! "
+exit 1 
 fi
