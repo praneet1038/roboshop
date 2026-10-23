@@ -8,7 +8,6 @@ else
     echo " $2 not successful"
     exit 1 
 fi
-
 }
 
 id roboshop
