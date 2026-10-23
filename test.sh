@@ -1,9 +1,15 @@
 #!/bin/bash
 
 x=$(id -u)
+
 y="$#"
-echo "$y"
-a=$1
+i=1
+while [ i -le $y ];
+do
+ yum install "$i" -y
+ i=i+1
+done
+
 
 if [ $x -ne 0 ]; then 
     echo "Run the script as root user"
