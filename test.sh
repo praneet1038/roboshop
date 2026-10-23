@@ -1,6 +1,8 @@
 #!/bin/bash
 
 x=$(id -u)
+y="$#"
+echo "$y"
 a=$1
 
 if [ $x -ne 0 ]; then 
