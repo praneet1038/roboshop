@@ -21,7 +21,9 @@ echo "Number of arguments passed to VALIDATE: $#"
 which nginx 
 if [ "$?" -eq 0 ]; then
 echo "NGINX already INSTALLED...SKIPPING"
+else 
 dnf install nginx -y
+fi
 VALIDATE $? "INSTALLING NGINX"
 
 dnf install tree -y
