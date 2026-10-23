@@ -24,7 +24,7 @@ echo " "$1" NOT INSTALLED "
 else
 echo ""$1" INSTALLED SUCCESSFULLY"
 fi
-
+fi
 }
 
 SOFTWARE treeEE
