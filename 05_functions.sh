@@ -18,6 +18,7 @@ fi
 }
 
 dnf install ngsssinx -y
+echo " This is the exit code:"$?" "
 
 VALIDATE $? "INSTALLING NGINX"
 
