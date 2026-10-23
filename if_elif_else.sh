@@ -6,10 +6,7 @@ NUMBER=$1
 
 if [ "$#" -eq 0 ]; then 
     echo "Please provide atleast one argument"
-    exit 1
-fi
-
-if [ $NUMBER -lt 100 ]; then
+elif [ $NUMBER -lt 100 ]; then
     echo "$NUMBER is less than 100"
 elif [ $NUMBER -eq 100 ]; then 
     echo "$NUMBER is equal to 100"
