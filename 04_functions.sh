@@ -11,4 +11,5 @@ fi
 
 }
 
-VALIDATE 
+id roboshop
+VALIDATE $? "roboshop user check "
