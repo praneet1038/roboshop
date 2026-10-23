@@ -16,11 +16,11 @@ echo "INSTALLING THE PROVIDED SOFTWARE"
 SOFTWARE(){
 which $1
 if [ "$?" -eq 0 ]; then
-echo "This software by the name "$1" is already installed "
+echo "This software by the name "$1" is already installed....SKIPPING "
 else
 dnf install $1 -y 
 fi
 
 }
 
-SOFTWARE yum
+SOFTWARE tree
