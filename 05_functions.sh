@@ -17,7 +17,7 @@ echo ""$2"....NOT SUCCESSFULL"
 fi
 }
 
-dnf install nginx -y
+dnf install ngsssinx -y
 
 VALIDATE $? "INSTALLING NGINX"
 
@@ -25,7 +25,7 @@ dnf install treeee -y
 echo "$?"
 VALIDATE $? "INSTALLING tree"
 
-dnf install yum -y
+dnf install yusssm -y
 
 VALIDATE $? "INSTALLING yum"
 
