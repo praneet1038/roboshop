@@ -22,3 +22,5 @@ dnf install $1 -y
 fi
 
 }
+
+SOFTWARE yum
