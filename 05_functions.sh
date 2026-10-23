@@ -18,12 +18,15 @@ fi
 echo "Number of arguments passed to VALIDATE: $#"
 }
 
-dnf install ngsssinx -y
+which nginx 
+if [ "$?" -eq 0 ]; then
+echo "NGINX already INSTALLED...SKIPPING"
+dnf install nginx -y
 VALIDATE $? "INSTALLING NGINX"
 
-dnf install treeee -y
+dnf install tree -y
 VALIDATE $? "INSTALLING tree"
 
-dnf install yusssm -y
+dnf install yum -y
 VALIDATE $? "INSTALLING yum"
 
