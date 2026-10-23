@@ -19,8 +19,12 @@ if [ "$?" -eq 0 ]; then
 echo "This software by the name "$1" is already installed....SKIPPING "
 else
 dnf install $1 -y 
+if [ "$?" -ne 0 ]; then
+echo " "$1" NOT INSTALLED "
+else
+echo ""$1" INSTALLED SUCCESSFULLY"
 fi
 
 }
 
-SOFTWARE tree
+SOFTWARE treeEE
