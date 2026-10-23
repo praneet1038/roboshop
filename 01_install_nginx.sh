@@ -4,7 +4,7 @@
 
 x=$(id -u)
 
-if [ $x -ge 0 ]; then 
+if [ $x -gt 0 ]; then 
     echo "RUN THIS SCRIPT AS ROOT USER"
     exit 1 
 else 
