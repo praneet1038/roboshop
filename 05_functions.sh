@@ -19,7 +19,7 @@ fi
 dnf install nginx -y
 
 VALIDATE $? "INSTALLING NGINX"
-echo "The number of arguments passed are: "$#""
+echo "The number of arguments passed are: $#"
 
 dnf install treeee -y
 
