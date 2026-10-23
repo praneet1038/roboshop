@@ -13,5 +13,5 @@ elif [ $NUMBER -eq 100 ]; then
 else 
     echo "$NUMBER is greater than 100 "
 fi
-
+ echo "The exit code if "$?" "
 
