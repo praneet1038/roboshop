@@ -24,3 +24,7 @@ dnf install tree -y
 
 VALIDATE $? "INSTALLING tree"
 
+dnf install yum -y
+
+VALIDATE $? "INSTALLING yum"
+
