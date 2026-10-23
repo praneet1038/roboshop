@@ -20,7 +20,7 @@ dnf install nginx -y
 
 VALIDATE $? "INSTALLING NGINX"
 
-dnf install tree -y
+dnf install treeee -y
 
 VALIDATE $? "INSTALLING tree"
 
