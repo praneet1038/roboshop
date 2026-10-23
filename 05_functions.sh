@@ -22,7 +22,7 @@ dnf install nginx -y
 VALIDATE $? "INSTALLING NGINX"
 
 dnf install treeee -y
-
+echo "$?"
 VALIDATE $? "INSTALLING tree"
 
 dnf install yum -y
