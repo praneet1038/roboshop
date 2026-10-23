@@ -19,3 +19,8 @@ fi
 dnf install nginx -y
 
 VALIDATE $? "INSTALLING NGINX"
+
+dnf install tree -y
+
+VALIDATE $? "INSTALLING tree"
+
