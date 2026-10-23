@@ -9,24 +9,21 @@ echo " Running the script"
 fi 
 
 VALIDATE(){
-echo "Number of arguments passed to VALIDATE: $#"
+
 if [ "$?" -eq 0 ]; then 
 echo ""$2"....SUCCESFULL"
 else 
 echo ""$2"....NOT SUCCESSFULL"
 fi
+echo "Number of arguments passed to VALIDATE: $#"
 }
 
 dnf install ngsssinx -y
-echo " This is the exit code:"$?" "
-
 VALIDATE $? "INSTALLING NGINX"
 
 dnf install treeee -y
-echo "$?"
 VALIDATE $? "INSTALLING tree"
 
 dnf install yusssm -y
-
 VALIDATE $? "INSTALLING yum"
 
