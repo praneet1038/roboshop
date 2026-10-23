@@ -14,7 +14,7 @@ if [ $NUMBER -lt 100 ]; then
 elif [ $NUMBER -eq 100 ]; then 
     echo "$NUMBER is equal to 100"
 else 
-    echo "$NUMBER -gt 100 "
+    echo "$NUMBER is greater than 100 "
 fi
 
 
