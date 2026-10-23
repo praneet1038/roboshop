@@ -9,6 +9,7 @@ echo " Running the script"
 fi 
 
 VALIDATE(){
+echo "Number of arguments passed to VALIDATE: $#"
 if [ "$?" -eq 0 ]; then 
 echo ""$2"....SUCCESFULL"
 else 
@@ -19,7 +20,6 @@ fi
 dnf install nginx -y
 
 VALIDATE $? "INSTALLING NGINX"
-echo "The number of arguments passed are: $#"
 
 dnf install treeee -y
 
