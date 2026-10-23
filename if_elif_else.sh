@@ -2,11 +2,11 @@
 
 NUMBER=$1
 
-if [ $NUMBER -lt 100 ];then
+if [$NUMBER -lt 100];then
 
 echo "$NUMBER is less than 100"
 
-elif [ $NUMBER -eq 100 ]; then 
+elif [$NUMBER -eq 100]; then 
 
 echo "$NUMBER is equal to 100"
 
