@@ -11,16 +11,16 @@ fi
 VALIDATE(){
  echo "CHECKING WHETHER THE SOFTWARE IS ALREADY INSTALLED OR NOT "
  echo "**********************************************************"
- rpm -qa $1
+ rpm -q $1
  if [ "$?" -eq 0 ]; then
- echo " The software by the name "$1" is already installed....SKIPPING"
+    echo " The software by the name "$1" is already installed....SKIPPING"
  else 
- echo "The software by the name "$1" began INSTALLING "
- dnf install $1 -y
+    echo "The software by the name "$1" began INSTALLING "
+    dnf install $1 -y
  if [ "$?" -eq 0 ]; then
- echo " The software by the name "$1" installed SUCCESSFULLY}"
- esle 
- echo "The installation software by the name "$1" FAILED "
+    echo " The software by the name "$1" installed SUCCESSFULLY}"
+ else 
+    echo "The installation software by the name "$1" FAILED "
  fi
  fi
 }
