@@ -1,8 +1,9 @@
+
 #!/bin/bash
+
 x=$1
-i=1
-for ($i -le $x)
-do 
-touch india$1
-i=i+1
-done 
+
+for ((i=1; i<=x; i++))
+do
+    touch "india$i"
+done
