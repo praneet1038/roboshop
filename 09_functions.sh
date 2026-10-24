@@ -14,7 +14,7 @@ fi
 VALIDATE(){
  echo "CHECKING WHETHER THE SOFTWARE IS ALREADY INSTALLED OR NOT " | tee -a $LOGS_FILE
  echo "**********************************************************" | tee -a $LOGS_FILE
- rpm -q $1
+ rpm -q $1 &> /dev/null
  if [ "$?" -eq 0 ]; then
     echo " The software by the name "$1" is already installed....SKIPPING" | tee -a $LOGS_FILE
  else 
