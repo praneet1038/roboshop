@@ -5,5 +5,5 @@ x=$1
 
 for ((i=1; i<=x; i++))
 do
-    rm -rf "india$i"
+    cat  india$i
 done
