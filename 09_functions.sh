@@ -1,7 +1,7 @@
 #!/bin/bash
 
-x=id -u
-if [$x -ne 0 ]; then
+ x=$(id -u)
+if [ "$x" -ne 0 ]; then
     echo "NOT ROOT"
     exit 1
     else
