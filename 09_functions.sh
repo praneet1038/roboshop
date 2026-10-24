@@ -26,3 +26,4 @@ VALIDATE(){
 }
 
 VALIDATE nginx
+VALIDATE dnf 
