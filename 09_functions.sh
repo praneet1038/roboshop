@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOGS_FOLDER="/var/log/shell-script"
-LOGS_FILE="$LOGS_FOLDER."$0".log"
+LOGS_FILE="/var/log/shell-script."$0".log"
 
  x=$(id -u)
 if [ "$x" -ne 0 ]; then
