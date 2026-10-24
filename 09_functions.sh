@@ -25,5 +25,10 @@ VALIDATE(){
  fi
 }
 
-VALIDATE nginx
-VALIDATE dnf 
+for i in "$@"
+do
+
+    echo "$i"
+    VALIDATE $i
+
+done 
