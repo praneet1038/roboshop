@@ -1,6 +1,6 @@
 #!/bin/bash
 
-x=id_u
+x=id -u
 if [$x -ne 0 ]; then
     echo "NOT ROOT"
     exit 1
