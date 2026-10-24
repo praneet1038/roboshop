@@ -1,6 +1,10 @@
+
 #!/bin/bash
 
-for i in {1..$1}
+start=$1
+end=$2
+
+for i in $(seq "$start" "$end")
 do
-echo "$i"
+    echo "$i"
 done
