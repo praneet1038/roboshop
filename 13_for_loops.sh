@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in delhi hyderabad bomaby calcutta 
+for i in "$@"
 do 
 echo "$i"
 done 
