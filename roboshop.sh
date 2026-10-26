@@ -10,7 +10,7 @@ aws ec2 run-instances \
   --image-id  $IMG_ID \
   --instance-type t2.micro \
   --security-group-ids $SG_ID \
-  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=$instance}]' \
+  --tag-specifications " ResourceType=instance,Tags=[{Key=Name,Value=$instance}]" \
 
   --query 'Instances[0].PrivateIpAddress' \
   --output text
