@@ -12,6 +12,8 @@ VALIDATE(){
     fi
 }
 
-VALIDATE nginx 
-VALIDATE tree
-VALIDATE dnf
+for x in "$@"
+do 
+VALIDATE "$x"
+
+done
