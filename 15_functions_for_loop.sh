@@ -20,8 +20,6 @@ dnf install $1 -y
 fi
 }
 
-for software in "$@"
-do 
-echo "$software"
-VALIDATE software
-done 
+VALIDATE nginx 
+VALIDATE tree
+VALIDATE dnf
