@@ -12,6 +12,7 @@ fi
 
 VALIDATE(){
 rpm -q $1
+echo "$?"
 if [ "$?" -eq 0 ]; then 
     echo "$1 PACKAGE IS ALREADY INSTALLED"
 else
