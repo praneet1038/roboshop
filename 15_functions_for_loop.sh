@@ -1,6 +1,5 @@
 #!/bin/bash
-set -e 
-trap "echo Exiting; exit" ERR
+
 
 
 VALIDATE(){
