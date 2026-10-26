@@ -1,9 +1,6 @@
 #!/bin/bash
-
-
 set -e 
-#trap "echo Exiting; exit" ERR
-
+trap "echo Exiting; exit" ERR
 
 x=$(id -u)
 if [ $x -ne 0 ]; then 
@@ -26,5 +23,5 @@ fi
 for software in "$@"
 do 
 echo "$software"
-VALIDATE $software
+VALIDATE software
 done 
