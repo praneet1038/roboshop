@@ -5,6 +5,3 @@ ID=$(aws ec2 run-instances --region "$REGION" --image-id "$AMI_ID" --instance-ty
 aws ec2 wait instance-running --region "$REGION" --instance-ids "$ID"
 aws ec2 describe-instances --region "$REGION" --instance-ids "$ID" --query 'Reservations[0].Instances[0].[PublicIpAddress,PrivateIpAddress]' --output table
 ```
-
-
-
