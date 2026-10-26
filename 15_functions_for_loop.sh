@@ -15,5 +15,4 @@ VALIDATE(){
 for x in "$@"
 do 
 VALIDATE "$x"
-
 done
