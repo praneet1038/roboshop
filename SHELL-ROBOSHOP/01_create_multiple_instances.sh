@@ -12,7 +12,14 @@ do
         --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" \
         --query 'Instances[0].InstanceId' \
         --output text) 
-    echo $ID    
+    echo $ID   
+    if [ $i == frontend ]; then 
+        aws ec2 describe-instances \
+        --instance-ids $ID \
+        --query 'Reservations[*].Instances[*].PublicIpAddress' \
+        --output text 
+
+
 done
 
-echo $ID
+
