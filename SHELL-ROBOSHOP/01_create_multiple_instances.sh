@@ -5,6 +5,7 @@ SG_ID=sg-013608902b1ff6867
 
 for instance in "$@"
 do
+echo $instance
 ID=$(aws ec2 run-instances \
     --image-id $AMI_ID \
     --instance-type t2.micro \
