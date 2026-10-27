@@ -11,4 +11,4 @@ ID=$(aws ec2 run-instances \
     --query 'Instances[0].InstanceId' \
     --output text) 
 
-echo "$ID"
+echo "My Id is :$ID"
