@@ -5,6 +5,7 @@ SG_ID=sg-013608902b1ff6867
 
 for instance in "$@"
 do 
+
 aws ec2 run-instances \
   --region us-east-1 \
   --image-id  $IMG_ID \
