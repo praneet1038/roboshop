@@ -19,7 +19,10 @@ do
         --query 'Reservations[*].Instances[*].PublicIpAddress' \
         --output text 
     else 
-        --query 'Reservations[*].Instances[*].PrivateIpAddress'
+        aws ec2 describe-instances \
+        --instance-ids $ID \
+        --query 'Reservations[*].Instances[*].PrivateIpAddress' \
+        --output text
     fi
 
 done
