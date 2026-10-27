@@ -12,6 +12,7 @@ do
         --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" \
         --query 'Instances[0].InstanceId' \
         --output text) 
+    echo $ID    
 done
 
 echo $ID
