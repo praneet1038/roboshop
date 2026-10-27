@@ -14,3 +14,4 @@ do
         --output text) 
 done
 
+echo $ID
