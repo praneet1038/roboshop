@@ -14,16 +14,17 @@ do
         --output text) 
     echo $ID   
     if [ $i == frontend ]; then 
-        IP=$(aws ec2 describe-instances \
+        IP=$( aws ec2 describe-instances \
         --instance-ids $ID \
         --query 'Reservations[*].Instances[*].PublicIpAddress' \
-        --output text) 
+        --output text ) 
     else 
-        IP=$(aws ec2 describe-instances \
+        IP=$( aws ec2 describe-instances \
         --instance-ids $ID \
         --query 'Reservations[*].Instances[*].PrivateIpAddress' \
-        --output text)
+        --output text )
     fi
+    echo "IP is : $IP"
 done
 
 
