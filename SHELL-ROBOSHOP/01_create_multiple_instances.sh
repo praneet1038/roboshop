@@ -18,7 +18,7 @@ do
         --instance-ids $ID \
         --query 'Reservations[*].Instances[*].PublicIpAddress' \
         --output text 
-
+    fi
 
 done
 
