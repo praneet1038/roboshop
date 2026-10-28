@@ -32,26 +32,22 @@ do
     fi
     
 aws route53 change-resource-record-sets \
-        --hosted-zone-id "$HOSTEDZONE_ID" \
-        --change-batch "$(cat <<EOF
-{
-    "Changes": [
-        {
-            "Action": "UPSERT",
-            "ResourceRecordSet": {
-                "Name": "$RECORD_NAME",
-                "Type": "A",
-                "TTL": 300,
-                "ResourceRecords": [
-                    {
-                        "Value": "$IP"
-                    }
-                ]
+    --hosted-zone-id $HOSTEDZONE_ID \
+    --change-batch '{
+        "Changes": [
+            {
+                "Action": "UPSERT",
+                "ResourceRecordSet": {
+                    "Name": "'$RECORD_NAME'",
+                    "Type": "A",
+                    "TTL":1,
+                    "ResourceRecords": [
+                        {
+                            "Value": "'$IP'"
+                        }
+                    ]
+                }
             }
-        }
-    ]
-}
-EOF
-)"
-
+        ]
+    }'   
 done
