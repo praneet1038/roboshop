@@ -8,47 +8,50 @@ DOMAIN_NAME=jirawiser.online
 for i in "$@"
 do
     ID=$(aws ec2 run-instances \
-        --image-id $AMI_ID \
+        --image-id "$AMI_ID" \
         --instance-type t2.micro \
         --security-group-ids $SG_ID \
         --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" \
         --query 'Instances[0].InstanceId' \
         --output text) 
     echo $ID   
-    if [ $i == frontend ]; then 
+    if [ "$i" == "frontend" ]; then 
         IP=$( aws ec2 describe-instances \
         --instance-ids $ID \
         --query 'Reservations[*].Instances[*].PublicIpAddress' \
         --output text ) 
         echo "PUBLIC IP is : $IP"
-        RECORD_NAME=$(DOMAIN_NAME)
+        RECORD_NAME=$DOMAIN_NAME
     else 
         IP=$( aws ec2 describe-instances \
         --instance-ids $ID \
         --query 'Reservations[*].Instances[*].PrivateIpAddress' \
         --output text )
         echo "private IP is : $IP"
-        RECORD_NAME=$(i).$(DOMAIN_NAME)
+        RECORD_NAME="$i.$DOMAIN_NAME"
     fi
     
-
 aws route53 change-resource-record-sets \
-    --hosted-zone-id $HOSTEDZONE_ID \
-    --change-batch '{
-        "Changes": [
-            {
-                "Action": "UPSERT",
-                "ResourceRecordSet": {
-                    "Name": "$DOMAIN_NAME",
-                    "Type": "A",
-                    "TTL":1,
-                    "ResourceRecords": [
-                        {
-                            "Value": "$IP"
-                        }
-                    ]
-                }
+        --hosted-zone-id "$HOSTEDZONE_ID" \
+        --change-batch "$(cat <<EOF
+{
+    "Changes": [
+        {
+            "Action": "UPSERT",
+            "ResourceRecordSet": {
+                "Name": "$RECORD_NAME",
+                "Type": "A",
+                "TTL": 300,
+                "ResourceRecords": [
+                    {
+                        "Value": "$IP"
+                    }
+                ]
             }
-        ]
-    }'   
+        }
+    ]
+}
+EOF
+)"
+
 done
