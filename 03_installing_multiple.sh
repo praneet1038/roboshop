@@ -19,6 +19,7 @@ else
     exit 1 
 fi
 
+
 echo "Installing tree...!!"
 dnf install tree -y 
 
